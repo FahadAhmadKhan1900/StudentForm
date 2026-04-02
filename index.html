@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Student Registration Form</h1>
+    <p class="subtitle">This form saves data to Supabase and allows searching by name or ID.</p>
+
+    <form id="studentForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="yearLevel">Year Level</label>
+      <select id="yearLevel" required>
+        <option value="">Select year level</option>
+        <option value="Year 11">Year 11</option>
+        <option value="Year 12">Year 12</option>
+        <option value="Year 13">Year 13</option>
+      </select>
+
+      <button type="submit">Save Student</button>
+    </form>
+
+    <p id="message"></p>
+
+    <h2>Student Records</h2>
+
+    <div class="actions">
+      <button id="loadBtn" type="button">Load All Records</button>
+    </div>
+
+    <h2>Search Students</h2>
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Enter student name or ID"
+    />
+
+    <div class="actions">
+      <button id="searchBtn" type="button">Search</button>
+      <button id="showAllBtn" type="button">Show All</button>
+    </div>
+
+    <div id="studentsList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
